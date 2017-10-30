@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+<button id="openModalButton">new plan</button><br>
+<div id="planContainer">
+    <div id="toDo">To Do<br>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="toDoPlan">
+            <div draggable="true" ondragstart="drag(event)" id="59f729f3f523c103d868a269" class="plan">고급 운영체제 논문 읽기</div>
+            <div draggable="true" ondragstart="drag(event)" id="59f72a0ff523c103d868a26a" class="plan">오픈스택 설치하기</div>
+        </div>
+    </div>
+    <div id="doing">Doing<br>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="doingPlan">
+            <div draggable="true" ondragstart="drag(event)" id="59f72a1af523c103d868a26b" class="plan">GitHub 강의자료 만들기</div>
+        </div>
+    </div>
+    <div id="done">Done<br>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="donePlan">
+        </div>
+    </div>
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content"><span class="close">&times;</span>
+        <p>Subject
+            <input type="text" id="subject">
+        </p>
+        <select id="planState">
+            <option value="toDo">To Do</option>
+            <option value="doing">Doing</option>
+            <option value="done">Done</option>
+        </select>
+        <textarea id="content"></textarea><br>
+        <button id="submit">submit</button>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="javascripts/planHandler.js"></script>
+</body>
+</html>
